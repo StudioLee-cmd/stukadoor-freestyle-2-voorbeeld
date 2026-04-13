@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GladGepleisterd Voorbeeld | Stukadoor Rotterdam - Glad & Sierpleister</title>
+  <meta name="description" content="GladGepleisterd Voorbeeld - Vakkundig stucwerk in Rotterdam. Specialisten in glad pleisterwerk, betonlook en sierpleister. Gratis offerte aanvragen.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Glad<span>Gepleisterd</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#diensten">Diensten</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary nav-cta">Gratis Offerte</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content fade-up">
+          <div class="hero-badge">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Erkend Stukadoorsbedrijf Rotterdam
+          </div>
+          <h1>Waar vakmanschap de <em>wand</em> raakt</h1>
+          <p>Al meer dan 12 jaar transformeren wij Rotterdamse woningen met stucwerk dat u elke dag blij maakt. Van strak glad tot warm sierpleister.</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+              Offerte Aanvragen
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#portfolio" class="btn btn-outline">Bekijk Ons Werk</a>
+          </div>
+        </div>
+        <div class="hero-image fade-in">
+          <img src="images/hero.jpg" alt="Stucwerk Rotterdam - GladGepleisterd" loading="eager">
+          <div class="hero-float slide-left">
+            <div class="hero-float-icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div>
+              <div class="hero-float-number">4.9/5</div>
+              <div class="hero-float-label">Google Reviews</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scroll Video Section -->
+  <section class="scroll-video-section" id="scroll-video">
+    <div class="scroll-video-canvas">
+      <canvas id="frameCanvas"></canvas>
+      <div class="scroll-video-overlay fade-in">
+        <h2>Vakmanschap zit in elk detail</h2>
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ======================== BEFORE / AFTER ======================== -->
+  <section class="ba-section" style="height:100vh;position:relative;overflow:hidden;background:#000;">
+    <div style="width:100%;height:100%;position:relative;">
+      <img src="images/craft.jpg" alt="Na" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1;">
+      <img src="images/hero.jpg" alt="Voor" id="baBefore" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:2;">
+      <div id="baLabel" style="position:absolute;z-index:3;bottom:10%;left:50%;transform:translateX(-50%);text-align:center;opacity:0;">
+        <span style="display:inline-block;background:var(--color-accent,#C1FF72);color:#0a0a0a;padding:8px 20px;border-radius:99px;font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin-bottom:16px;">Scroll om te zien</span>
+        <h2 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.15;color:#fff;text-shadow:0 4px 20px rgba(0,0,0,0.6);">Van oud naar <em style="color:var(--color-accent,#C1FF72);">nieuw</em></h2>
+      </div>
+    </div>
+  </section>
+<!-- Services -->
+  <section class="services section" id="diensten">
+    <div class="container">
+      <div class="services-header">
+        <div class="section-label fade-up">Wat wij doen</div>
+        <h2 class="section-title fade-up">Stucwerk voor elke ruimte<br>en elke smaak</h2>
+        <p class="section-subtitle fade-up">Of het nu gaat om een strakke woonkamer of een sfeervolle horecazaak, wij hebben de expertise in huis.</p>
+      </div>
+      <div class="services-grid">
+        <!-- 1 -->
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect></svg>
+          </div>
+          <h3>Glad Stucwerk</h3>
+          <p>Spiegelglad pleisterwerk voor een moderne, minimalistische uitstraling. De perfecte basis voor elk interieur.</p>
+          <div class="price">Vanaf 26,- per m2</div>
+        </div>
+        <!-- 2 -->
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </div>
+          <h3>Betonlook</h3>
+          <p>Industrieel en toch warm. Onze Beton Cire techniek geeft uw wanden de rauwe elegantie van beton met de zachtheid van stuc.</p>
+          <div class="price">Vanaf 42,- per m2</div>
+        </div>
+        <!-- 3 -->
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.912 5.813a2 2 0 0 0 1.275 1.275L21 12l-5.813 1.912a2 2 0 0 0-1.275 1.275L12 21l-1.912-5.813a2 2 0 0 0-1.275-1.275L3 12l5.813-1.912a2 2 0 0 0 1.275-1.275L12 3z"></path></svg>
+          </div>
+          <h3>Sierpleister</h3>
+          <p>Textuur, kleur en karakter in een. Keuze uit tientallen stijlen voor een wand die echt een statement maakt.</p>
+          <div class="price">Vanaf 34,- per m2</div>
+        </div>
+        <!-- 4 -->
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <h3>Spachtelputz</h3>
+          <p>Een fijne structuurpleister die subtiel en stijlvol is. Ideaal voor wie iets meer wil dan een gladde wand zonder overdrijven.</p>
+          <div class="price">Vanaf 30,- per m2</div>
+        </div>
+        <!-- 5 -->
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 3 21 3 21 9"></polyline><polyline points="9 21 3 21 3 15"></polyline><line x1="21" y1="3" x2="14" y2="10"></line><line x1="3" y1="21" x2="10" y2="14"></line></svg>
+          </div>
+          <h3>Plafond Afwerking</h3>
+          <p>Professioneel gestucte plafonds zonder naden, oneffenheden of zichtbare overgangen. Nieuwbouw of renovatie.</p>
+          <div class="price">Vanaf 28,- per m2</div>
+        </div>
+        <!-- 6 -->
+        <div class="service-card fade-up">
+          <div class="service-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3>Reparatie & Renovatie</h3>
+          <p>Scheuren, vochtschade of verouderd stucwerk? Wij brengen uw muren terug naar perfecte staat, onzichtbaar hersteld.</p>
+          <div class="price">Op aanvraag</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section class="stats section">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item fade-up">
+          <div class="stat-number"><span class="counter" data-target="650">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">Projecten Afgerond</div>
+        </div>
+        <div class="stat-item fade-up">
+          <div class="stat-number"><span class="counter" data-target="12">0</span><span class="stat-suffix"> jaar</span></div>
+          <div class="stat-label">Ervaring in Rotterdam</div>
+        </div>
+        <div class="stat-item fade-up">
+          <div class="stat-number"><span class="counter" data-target="18000">0</span><span class="stat-suffix"> m2</span></div>
+          <div class="stat-label">Gestuct Oppervlak</div>
+        </div>
+        <div class="stat-item fade-up">
+          <div class="stat-number"><span class="counter" data-target="4.9">0</span><span class="stat-suffix">/5</span></div>
+          <div class="stat-label">Klantwaardering</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials section" id="reviews">
+    <div class="container">
+      <div class="services-header">
+        <div class="section-label fade-up">Klantreviews</div>
+        <h2 class="section-title fade-up">Wat Rotterdam over ons zegt</h2>
+        <p class="section-subtitle fade-up">Eerlijke woorden van tevreden klanten. Daar zijn we het meest trots op.</p>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Onze hele benedenverdieping is prachtig glad gestuct. Het verschil met daarvoor is enorm. Super nette jongens die precies doen wat ze beloven. Grote aanrader!"</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">LK</div>
+            <div>
+              <div class="testimonial-name">Linda Kok</div>
+              <div class="testimonial-role">Huiseigenaar, Kralingen</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Ik wilde betonlook in mijn loft en het resultaat is nog mooier dan ik had gehoopt. Ze hebben zelfs de trap meegepakt. Vakmannen met een goed oog voor detail."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">PD</div>
+            <div>
+              <div class="testimonial-name">Pieter de Groot</div>
+              <div class="testimonial-role">Appartementeigenaar, Katendrecht</div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-card fade-up">
+          <div class="testimonial-stars">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">"Voor ons kantoor hebben ze alle plafonds en wanden afgewerkt. Strak gepland, op tijd klaar en een super resultaat. De samenwerking was heel prettig."</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">AW</div>
+            <div>
+              <div class="testimonial-name">Anne Willems</div>
+              <div class="testimonial-role">Facility Manager, Rotterdam Centrum</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery section" id="portfolio">
+    <div class="container">
+      <div class="gallery-header">
+        <div class="section-label fade-up">Ons Werk</div>
+        <h2 class="section-title fade-up">Projecten die voor zich spreken</h2>
+        <p class="section-subtitle fade-up">Van grachtenpand tot nieuwbouw penthouse. Bekijk een selectie van ons recente werk in Rotterdam.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item scale-in"><img src="images/hero.jpg" alt="Glad stucwerk woonkamer Rotterdam" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/craft.jpg" alt="Stukadoor vakmanschap" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/project1.jpg" alt="Betonlook project Rotterdam" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/project2.jpg" alt="Sierpleister afwerking" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/kitchen.jpg" alt="Keuken stucwerk" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/detail.jpg" alt="Detail afwerking stucwerk" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/about.jpg" alt="Stukadoor aan het werk" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/team.jpg" alt="Team GladGepleisterd" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/carousel.jpg" alt="Resultaat stucwerk" loading="lazy"></div>
+        <div class="gallery-item scale-in"><img src="images/cta-bg.jpg" alt="Stucwerk achtergrond" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container">
+      <div class="faq-inner">
+        <div class="faq-left">
+          <div class="section-label fade-up">Veelgestelde Vragen</div>
+          <h2 class="section-title fade-up">Wij beantwoorden graag uw vragen</h2>
+          <p class="section-subtitle fade-up">Staat uw vraag er niet tussen? Neem gerust contact op, wij helpen u graag verder.</p>
+          <a href="#contact" class="btn btn-taupe fade-up">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Stel Uw Vraag
+          </a>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item fade-up">
+            <button class="faq-question">
+              Wat kost stucwerk per vierkante meter?
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>De kosten varieren van 26,- per m2 voor glad stucwerk tot 45,- per m2 voor betonlook. Factoren als de staat van de ondergrond, de hoogte van de ruimte en het gewenste type afwerking bepalen de uiteindelijke prijs. Wij komen altijd eerst gratis langs voor een inmeting.</p></div>
+          </div>
+          <div class="faq-item fade-up">
+            <button class="faq-question">
+              Werken jullie ook in de avonduren?
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Ja, voor zakelijke klanten bieden wij avond- en weekendwerk aan zodat uw bedrijfsvoering niet wordt verstoord. Voor particulieren werken we standaard overdag, maar in overleg is veel mogelijk.</p></div>
+          </div>
+          <div class="faq-item fade-up">
+            <button class="faq-question">
+              Hoe bereiden jullie de ondergrond voor?
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Een goede voorbereiding is essentieel. Wij controleren de ondergrond op hechting, vullen scheuren en oneffenheden, en brengen een primer aan. Bij nieuwbouw zorgen we voor de juiste hechtlaag. Dit garandeert een langdurig en professioneel resultaat.</p></div>
+          </div>
+          <div class="faq-item fade-up">
+            <button class="faq-question">
+              Kan ik stucwerk over behang heen laten aanbrengen?
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Nee, behang moet altijd eerst volledig verwijderd worden. Stucwerk over behang leidt tot hechting-problemen en blaasvorming. Wij verwijderen desgewenst het behang en bereiden de muur voor op het stucwerk.</p></div>
+          </div>
+          <div class="faq-item fade-up">
+            <button class="faq-question">
+              Geven jullie garantie op het werk?
+              <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <div class="faq-answer"><p>Absoluut. Wij geven standaard 5 jaar garantie op al ons stucwerk. Mochten er onverhoopt gebreken optreden die aan ons vakmanschap te wijten zijn, dan lossen wij dit kosteloos op. Uw tevredenheid is onze garantie.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta section" id="contact">
+    <div class="container">
+      <div class="cta-inner fade-up">
+        <h2>Stucwerk op maat in Rotterdam</h2>
+        <p>Plan een gratis inmeting en ontvang binnen 48 uur een heldere offerte. Geen verplichtingen, wel goed advies.</p>
+        <a href="tel:+31101234567" class="btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Bel 010 - 123 4567
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Glad<span>Gepleisterd</span></div>
+          <p class="footer-desc">Vakkundig stucwerk in Rotterdam en omstreken. Van glad pleister tot betonlook, sierpleister en plafonds. Sinds 2014.</p>
+        </div>
+        <div>
+          <h4>Diensten</h4>
+          <ul class="footer-links">
+            <li><a href="#diensten">Glad Stucwerk</a></li>
+            <li><a href="#diensten">Betonlook</a></li>
+            <li><a href="#diensten">Sierpleister</a></li>
+            <li><a href="#diensten">Plafonds</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Informatie</h4>
+          <ul class="footer-links">
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="tel:+31101234567">010 - 123 4567</a></li>
+            <li><a href="mailto:info@gladgepleisterd.nl">info@gladgepleisterd.nl</a></li>
+            <li>Witte de Withstraat 40</li>
+            <li>3012 Rotterdam</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 GladGepleisterd Voorbeeld. Alle rechten voorbehouden.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- StudioLee Badge -->
+  <a href="https://www.studiolee.nl/website-laten-maken/stukadoors" class="studiolee-badge" target="_blank" rel="noopener">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--taupe)" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l2 2 4-4"/></svg>
+    Website door StudioLee
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    /* Nav scroll */
+    window.addEventListener('scroll',()=>{
+      document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50);
+    });
+
+    /* Hamburger */
+    document.getElementById('hamburger').addEventListener('click',()=>{
+      document.getElementById('navLinks').classList.toggle('open');
+    });
+
+    /* GSAP fade-up */
+    gsap.utils.toArray('.fade-up').forEach(el=>{
+      gsap.to(el,{opacity:1,y:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 85%',toggleActions:'play none none none'}});
+    });
+    gsap.utils.toArray('.fade-in').forEach(el=>{
+      gsap.to(el,{opacity:1,duration:1.2,ease:'power2.out',scrollTrigger:{trigger:el,start:'top 80%'}});
+    });
+    gsap.utils.toArray('.scale-in').forEach(el=>{
+      gsap.to(el,{opacity:1,scale:1,duration:.8,ease:'back.out(1.4)',scrollTrigger:{trigger:el,start:'top 85%'}});
+    });
+    gsap.utils.toArray('.slide-left').forEach(el=>{
+      gsap.to(el,{opacity:1,x:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 85%'}});
+    });
+
+    /* Service cards stagger */
+    gsap.utils.toArray('.service-card').forEach((card,i)=>{
+      gsap.to(card,{opacity:1,y:0,duration:.8,delay:i*.1,ease:'power3.out',scrollTrigger:{trigger:card,start:'top 85%'}});
+    });
+
+    /* Gallery stagger */
+    gsap.utils.toArray('.gallery-item').forEach((item,i)=>{
+      gsap.to(item,{opacity:1,scale:1,duration:.6,delay:i*.08,ease:'back.out(1.2)',scrollTrigger:{trigger:item,start:'top 90%'}});
+    });
+
+    /* Counter animation */
+    document.querySelectorAll('.counter').forEach(counter=>{
+      const target=parseFloat(counter.dataset.target);
+      const isDecimal=target%1!==0;
+      ScrollTrigger.create({
+        trigger:counter,
+        start:'top 85%',
+        onEnter:()=>{
+          gsap.to({val:0},{val:target,duration:2,ease:'power2.out',onUpdate:function(){
+            counter.textContent=isDecimal?this.targets()[0].val.toFixed(1):Math.floor(this.targets()[0].val).toLocaleString('nl-NL');
+          }});
+        },
+        once:true
+      });
+    });
+
+    /* Scroll Video (Canvas Frame Sequence) */
+    (function(){
+      const canvas=document.getElementById('frameCanvas');
+      if(!canvas)return;
+      const ctx=canvas.getContext('2d');
+      const frameCount = 121;
+      const images=[];
+      let loadedCount=0;
+
+      function framePath(i){
+        return 'images/frames/frame-' + String(i).padStart(3, '0') + '.jpg';
+      }
+
+      for(let i=0;i<frameCount;i++){
+        const img=new Image();
+        img.src=framePath(i);
+        img.onload=()=>{
+          loadedCount++;
+          if(loadedCount===1) drawFrame(0);
+        };
+        images[i]=img;
+      }
+
+      function drawFrame(index){
+        const img=images[index];
+        if(!img||!img.complete)return;
+        canvas.width=window.innerWidth;
+        canvas.height=window.innerHeight;
+        const scale=Math.max(canvas.width/img.width,canvas.height/img.height);
+        const x=(canvas.width-img.width*scale)/2;
+        const y=(canvas.height-img.height*scale)/2;
+        ctx.drawImage(img,x,y,img.width*scale,img.height*scale);
+      }
+
+      const obj={frame:0};
+      ScrollTrigger.create({
+        trigger:'.scroll-video-section',
+        start:'top top',
+        end:'+=600%',
+        pin:true,
+        scrub:1,
+        onUpdate:self=>{
+          const frame=Math.min(frameCount-1,Math.floor(self.progress*frameCount));
+          if(frame!==obj.frame){
+            obj.frame=frame;
+            drawFrame(frame);
+          }
+        }
+      });
+
+      window.addEventListener('resize',()=>drawFrame(obj.frame));
+    })();
+
+    /* FAQ Accordion */
+    document.querySelectorAll('.faq-question').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const item=btn.parentElement;
+        const isActive=item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));
+        if(!isActive) item.classList.add('active');
+      });
+    });
+
+    /* Testimonials stagger */
+    gsap.utils.toArray('.testimonial-card').forEach((card,i)=>{
+      gsap.to(card,{opacity:1,y:0,duration:.8,delay:i*.15,ease:'power3.out',scrollTrigger:{trigger:card,start:'top 85%'}});
+    });
+  </script>
+
+    // Before/After slider
+    (function() {
+      var before = document.getElementById('baBefore');
+      var label = document.getElementById('baLabel');
+      if (!before || typeof gsap === 'undefined') return;
+      gsap.registerPlugin(ScrollTrigger);
+      var tl = gsap.timeline({
+        scrollTrigger: { trigger: '.ba-section', start: 'top top', end: '+=200%', pin: true, scrub: 0.5, anticipatePin: 1 }
+      });
+      tl.fromTo(before, { clipPath: 'inset(0 0 0 0)' }, { clipPath: 'inset(0 100% 0 0)', duration: 1, ease: 'none' });
+      tl.fromTo(label, { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' }, 0.5);
+    })();
+
+</body>
+</html>
